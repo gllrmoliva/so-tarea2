@@ -31,7 +31,7 @@ Para compilar el simulador:
 
 ```bash
 cd parte2
-gcc -o sim main.c
+make
 ````
 
 La ejecución requiere especificar el número de marcos, el tamaño de página (en bytes) y el archivo de traza. Opcionalmente acepta la bandera `--verbose` para mostrar el paso a paso de la traducción.
@@ -39,12 +39,12 @@ La ejecución requiere especificar el número de marcos, el tamaño de página (
 **Sintaxis:**
 
 ```bash
-./sim Nmarcos tamañomarco [--verbose] traza.txt
+./sim Nmarcos tamañomarco [--verbose] traces/traza.txt
 ```
 
 **Ejemplos de uso:**
 
-1.  Ejecución simple (solo reporte final):
+1.  Ejecución simple:
 
     ```bash
     ./sim 8 4096 traza.txt
@@ -55,3 +55,17 @@ La ejecución requiere especificar el número de marcos, el tamaño de página (
     ```bash
     ./sim 16 4096 --verbose traza.txt
     ```
+
+*Para ejecutar todas las pruebas:*
+```bash
+./sim 3 4096 --verbose traces/trace_test1.txt  
+./sim 3 4096 --verbose traces/trace_test2.txt  
+./sim 3 4096 --verbose traces/trace_test3.txt  
+./sim 3 4096 --verbose traces/trace_test4.txt  
+./sim 8 8 traces/trace1.txt
+./sim 16 8 traces/trace1.txt
+./sim 32 8 traces/trace1.txt
+./sim 8 4096 traces/trace2.txt
+./sim 16 4096 traces/trace2.txt
+./sim 32 4096 traces/trace2.txt
+```

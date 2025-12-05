@@ -2,7 +2,7 @@
 #define TYPES_H
 
 // #################################################################
-// En este archivo solo se define la estrura de los marcos de página
+// En este archivo solo se define la estrura de los frames de página
 // #################################################################
 
 typedef struct {
